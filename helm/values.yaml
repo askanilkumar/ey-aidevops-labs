@@ -3,3 +3,8 @@ worker:
   image:
     repository: eylabacr31b021.azurecr.io/shared/shipwave-worker
     tag: "1.0"
+
+# API image: the pipeline sets the tag to the commit SHA at deploy time.
+image:
+  repository: eylabacr31b021.azurecr.io/ff-u00/shipwave-api
+  tag: initial
