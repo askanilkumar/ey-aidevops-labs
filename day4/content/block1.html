@@ -35,25 +35,17 @@ textarea{width:100%;min-height:100px;font-family:ui-monospace,Consolas,monospace
 
 <div class="step"><span class="tag">📝 EDITOR</span><div>Open the spec:</div><pre>code day4\labs\block1-iac\spec.md</pre></div>
 
-<div class="step"><span class="tag">🖥️ TERMINAL</span><div>Create your working folder and empty Terraform file (you'll fill it with Copilot):</div><pre>cd C:\EYLAB\ey-aidevops-labs
-mkdir day4\block1 2>$null
-ni day4\block1\main.tf -Force | Out-Null
-code day4\block1\main.tf</pre></div>
+<div class="step"><span class="tag">🖥️ TERMINAL</span><div>Create your working folder and empty Terraform file (you'll fill it with Copilot):</div><pre>cd C:\EYLAB\ey-aidevops-labs</pre><pre>mkdir -Force day4\block1</pre><pre>code day4\block1\main.tf</pre></div>
 
 <div class="step"><span class="tag">💬 COPILOT CHAT</span><div>In Copilot Chat, with <code>main.tf</code> open:</div><pre>Read #file:spec.md (from day4/labs/block1-iac). Write a complete main.tf for Azure using azurerm ~> 4.0 that meets every numbered requirement. Output a single main.tf. Nothing else.</pre></div>
 
-<div class="step"><span class="tag">🖥️ TERMINAL</span><div>Validate locally:</div><pre>cd day4\block1
-terraform init
-terraform fmt
-terraform validate
-terraform plan</pre></div>
+<div class="step"><span class="tag">🖥️ TERMINAL</span><div>Validate locally:</div><pre>cd day4\block1</pre><pre>terraform init</pre><pre>terraform fmt</pre><pre>terraform validate</pre><pre>terraform plan</pre></div>
 
 <div class="think"><b>Checkpoint pause.</b> Trainer walks through what Copilot got wrong on their run (common ones: deprecated <code>soft_delete_enabled</code>, missing <code>features {}</code> block, hardcoded location, wrong tenant_id). Fix yours.</div>
 
-<div class="step"><span class="tag">🖥️ TERMINAL</span><div>Apply locally so you SEE it in the portal:</div><pre>terraform apply -auto-approve</pre></div>
+<div class="step"><span class="tag">🖥️ TERMINAL</span><div>Apply (this creates the real resources in Azure):</div><pre>terraform apply -auto-approve</pre></div>
 
-<div class="step"><span class="tag">🖥️ TERMINAL</span><div>Check what Terraform created:</div><pre>terraform state list
-terraform output</pre></div>
+<div class="step"><span class="tag">🖥️ TERMINAL</span><div>Check what Terraform created:</div><pre>terraform state list</pre><pre>terraform output</pre></div>
 
 <div class="think"><b>Trainer screen share:</b> the trainer opens the Azure Portal and shows a few of your resource groups live: Storage Account, Key Vault, tags, versioning, soft-delete. Compare with the spec.</div>
 
@@ -63,11 +55,7 @@ terraform output</pre></div>
 
 <div class="step"><span class="tag">💬 COPILOT CHAT</span><div>Give Copilot the spec:</div><pre>Read #file:spec-solo.md and extend my existing #file:main.tf. Do not remove anything that is already there. Keep the provider pinned and the tags consistent.</pre></div>
 
-<div class="step"><span class="tag">🖥️ TERMINAL</span><div>Validate, plan, apply:</div><pre>cd C:\EYLAB\ey-aidevops-labs\day4\block1
-terraform fmt
-terraform validate
-terraform plan      # scroll: it should list 4 or more NEW resources
-terraform apply -auto-approve</pre></div>
+<div class="step"><span class="tag">🖥️ TERMINAL</span><div>Validate, plan, apply:</div><pre>cd C:\EYLAB\ey-aidevops-labs\day4\block1</pre><pre>terraform fmt</pre><pre>terraform validate</pre><pre>terraform plan      # scroll: it should list 4 or more NEW resources</pre><pre>terraform apply -auto-approve</pre></div>
 
 <div class="step"><span class="tag">🖥️ TERMINAL</span><div>Score what landed:</div><pre>python ..\labs\block1-iac\verify.py</pre></div>
 

@@ -33,19 +33,7 @@ textarea{width:100%;min-height:80px;font-family:ui-monospace,Consolas,monospace;
 <li>Share your screen when you win so everyone sees the finish.</li>
 </ul></div>
 
-<div class="step"><span class="tag">🖥️ TERMINAL</span><div>Starter commands (adapt to the trainer's spec):</div><pre>cd C:\EYLAB\ey-aidevops-labs
-mkdir day4\mystery 2>$null; cd day4\mystery
-# 1. Ask Copilot for: app + Dockerfile + k8s.yaml (Deployment + Service) from the trainer's one-line spec
-# 2. Image name MUST start with your namespace:
-$img = "$env:ACR_LOGIN_SERVER/$env:NAMESPACE/mystery:v1"
-docker build -t $img .
-docker push $img
-# 3. Put $img in k8s.yaml, then:
-kubectl apply -f k8s.yaml
-kubectl rollout status deploy/mystery
-kubectl port-forward svc/mystery 8080:80
-# 4. In a second terminal:
-curl http://localhost:8080/health</pre></div>
+<div class="step"><span class="tag">🖥️ TERMINAL</span><div>Starter commands (adapt to the trainer's spec):</div><pre>cd C:\EYLAB\ey-aidevops-labs</pre><pre>mkdir -Force day4\mystery</pre><pre>cd day4\mystery</pre><div class="sm">1. Ask Copilot for: app + Dockerfile + k8s.yaml (Deployment + Service) from the trainer's one-line spec</div><div class="sm">2. Image name MUST start with your namespace:</div><pre>$img = "$env:ACR_LOGIN_SERVER/$env:NAMESPACE/mystery:v1"</pre><pre>docker build -t $img .</pre><pre>docker push $img</pre><div class="sm">3. Put $img in k8s.yaml, then:</div><pre>kubectl apply -f k8s.yaml</pre><pre>kubectl rollout status deploy/mystery</pre><pre>kubectl port-forward svc/mystery 8080:80</pre><div class="sm">4. In a second terminal:</div><pre>curl http://localhost:8080/health</pre></div>
 
 <h2>The thread across 4 days (5 min)</h2>
 <p>Zoom out. One sentence per day:</p>

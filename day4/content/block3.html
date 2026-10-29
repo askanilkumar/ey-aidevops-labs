@@ -38,9 +38,7 @@ textarea{width:100%;min-height:100px;font-family:ui-monospace,Consolas,monospace
 
 <h2>Guided: see the cost of Block 1 (20 min)</h2>
 
-<div class="step"><span class="tag">🖥️ TERMINAL</span><div>Break down the Block 1 Terraform:</div><pre>cd C:\EYLAB\ey-aidevops-labs\day4\block1
-infracost breakdown --path .
-# if it asks for a key:  infracost configure set api_key $env:INFRACOST_API_KEY</pre></div>
+<div class="step"><span class="tag">🖥️ TERMINAL</span><div>Break down the Block 1 Terraform:</div><pre>cd C:\EYLAB\ey-aidevops-labs\day4\block1</pre><pre>infracost breakdown --path .</pre><div class="sm">if it asks for a key:  infracost configure set api_key $env:INFRACOST_API_KEY</div></div>
 
 <div class="think"><b>Notice:</b> Consumption Function App is &lt;$1/month if you never call it. The Log Analytics workspace is the biggest line. Storage is a few cents.</div>
 
@@ -50,14 +48,9 @@ infracost breakdown --path .
 
 <div class="step"><span class="tag">📝 EDITOR</span><div>Open the solo spec:</div><pre>code C:\EYLAB\ey-aidevops-labs\day4\labs\block3-finops\spec.md</pre></div>
 
-<div class="step"><span class="tag">🖥️ TERMINAL</span><div>Make a fresh work folder for this round:</div><pre>cd C:\EYLAB\ey-aidevops-labs
-mkdir day4\block3 2>$null
-cd day4\block3
-ni main.tf -Force | Out-Null
-code main.tf</pre></div>
+<div class="step"><span class="tag">🖥️ TERMINAL</span><div>Make a fresh work folder for this round:</div><pre>cd C:\EYLAB\ey-aidevops-labs</pre><pre>mkdir -Force day4\block3</pre><pre>cd day4\block3</pre><pre>code main.tf</pre></div>
 
-<div class="step"><span class="tag">💬 COPILOT CHAT + 🖥️ TERMINAL</span><div>Follow Round 1 (careless prompt) in the spec. Then:</div><pre>terraform init
-infracost breakdown --path .</pre></div>
+<div class="step"><span class="tag">💬 COPILOT CHAT + 🖥️ TERMINAL</span><div>Follow Round 1 (careless prompt) in the spec. Then:</div><pre>terraform init</pre><pre>infracost breakdown --path .</pre></div>
 
 <div class="step"><span class="tag">💬 COPILOT CHAT + 🖥️ TERMINAL</span><div>Follow Round 2 (spec with cost constraints). Overwrite <code>main.tf</code>. Then run Infracost again.</div></div>
 

@@ -23,14 +23,10 @@ button.cp{float:right;font-size:13px;margin-left:8px;cursor:pointer;border:1px s
 <p>You already know AI can write code. Today you let it <b>ship</b> — infrastructure, pipelines, and a small agent that acts on your cluster. One thing stays constant across every block: <b>trust but verify, with numbers</b>.</p>
 
 <h2>Before we start (2 minutes)</h2>
-<div class="step"><span class="tag">🖥️ TERMINAL</span><div>Pull Day 4 files.</div><pre>cd C:\EYLAB\ey-aidevops-labs
-.\sync.ps1</pre></div>
+<div class="step"><span class="tag">🖥️ TERMINAL</span><div>Pull Day 4 files.</div><pre>cd C:\EYLAB\ey-aidevops-labs</pre><pre>.\sync.ps1</pre></div>
 <div class="step"><span class="tag">🖥️ TERMINAL</span><div>Check your machine. Paste the one-line result in chat.</div><pre>.\preflight.ps1</pre></div>
 <div class="step"><span class="tag">🖥️ TERMINAL</span><div>Load your lab card into THIS terminal.</div><pre>. C:\EYLAB\ey-aidevops-labs\lab-env.ps1</pre></div>
-<div class="step"><span class="tag">🖥️ TERMINAL</span><div>Check your Day 4 tools and Azure card. You should see a version number for each, and your resource group name.</div><pre>terraform version
-infracost --version
-kubectl version --client
-echo $env:RESOURCE_GROUP</pre></div>
+<div class="step"><span class="tag">🖥️ TERMINAL</span><div>Check your Day 4 tools and Azure card. You should see a version number for each, and your resource group name.</div><pre>terraform version</pre><pre>infracost --version</pre><pre>kubectl version --client</pre><pre>echo $env:RESOURCE_GROUP</pre></div>
 <div class="step"><span class="tag">📝 EDITOR</span><div>Open VS Code on the repo root: <code>code C:\EYLAB\ey-aidevops-labs</code></div></div>
 
 <h2>Today</h2>
