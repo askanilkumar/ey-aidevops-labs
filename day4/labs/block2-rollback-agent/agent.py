@@ -62,8 +62,9 @@ def run(namespace, deployment):
             "You are a Kubernetes deploy health-check agent. "
             "Use the tools to investigate the given deployment. "
             "Decide healthy or unhealthy. If unhealthy and a previous revision "
-            "exists, propose exactly ONE rollout_undo call. Never run it directly "
-            "without the operator approving first."},
+            "exists, CALL the rollout_undo tool exactly once. Do not ask the operator "
+            "in text: the program itself shows the operator an approval prompt "
+            "before the tool runs. If healthy, say so and call no action tool."},
         {"role": "user", "content":
             f"Deployment '{deployment}' in namespace '{namespace}'. "
             "Investigate and decide."},
