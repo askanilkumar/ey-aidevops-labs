@@ -5,7 +5,7 @@ investigates a deployment, decides healthy/unhealthy, proposes a rollback,
 asks the operator, then acts.  Everything is logged to audit.log.
 
 Usage:
-  python agent.py --deployment shipwave-api
+  python agent.py --deployment agent-demo
 """
 import argparse, json, os, sys, time, requests
 from pathlib import Path
